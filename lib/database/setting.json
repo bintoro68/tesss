@@ -1,0 +1,14 @@
+{
+  "limitCount": 25,
+  "memberLimit": 255,
+  "groupLimit": 25,
+  "barbarkey": "qKF5WI4Sk3kC11WQ1VD9",
+  "vhtearkey": "YOUR_APIKEY",
+  "prefix": "#",
+  "owner": "6281368646011@c.us",
+  "mtc": false,
+  "restartState": false,
+  "restartId": "undefined",
+  "banChats": false,
+  "Rest": true
+}
