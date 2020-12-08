@@ -37,9 +37,9 @@ function restartAwal(tobz){
 
 const start = async (tobz = new Client()) => {
         console.log('------------------------------------------------')
-        console.log(color(figlet.textSync('DARK BOT', { horizontalLayout: 'full' })))
+        console.log(color(figlet.textSync('ELAINA BOT', { horizontalLayout: 'full' })))
         console.log('------------------------------------------------')
-        console.log('[DEV] ANKER')
+        console.log('[DEV] TOBZ')
         console.log('[SERVER] Server Started!')
         tobz.onAnyMessage((fn) => messageLog(fn.fromMe, fn.type))
         // Force it to keep the current session
@@ -69,12 +69,12 @@ const start = async (tobz = new Client()) => {
             }))
         
         tobz.onAddedToGroup(async (chat) => {
-            if(isWhite(chat.id)) return tobz.sendText(chat.id, 'Halo aku DARK BOT, Ketik #help Untuk Melihat List Command Ku...')
+            if(isWhite(chat.id)) return tobz.sendText(chat.id, 'Halo aku Elaina, Ketik #help Untuk Melihat List Command Ku...')
             if(mtcState === false){
                 const groups = await tobz.getAllGroups()
                 // BOT group count less than
                 if(groups.length > groupLimit){
-                    await tobz.sendText(chat.id, 'Maaf, Batas group yang dapat DARK BOT tampung sudah penuh').then(async () =>{
+                    await tobz.sendText(chat.id, 'Maaf, Batas group yang dapat Elaina tampung sudah penuh').then(async () =>{
                         tobz.deleteChat(chat.id)
                         tobz.leaveGroup(chat.id)
                     })
@@ -85,11 +85,11 @@ const start = async (tobz = new Client()) => {
                             tobz.leaveGroup(chat.id)
                         })
                     }else{
-                        if(!chat.isReadOnly) tobz.sendText(chat.id, 'Halo aku DARK BOT, Ketik #help Untuk Melihat List Command Ku...')
+                        if(!chat.isReadOnly) tobz.sendText(chat.id, 'Halo aku Elaina, Ketik #help Untuk Melihat List Command Ku...')
                     }
                 }
             }else{
-                await tobz.sendText(chat.id, 'DARK BOT sedang maintenance, coba lain hari').then(async () => {
+                await tobz.sendText(chat.id, 'Elaina sedang maintenance, coba lain hari').then(async () => {
                     tobz.deleteChat(chat.id)
                     tobz.leaveGroup(chat.id)
                 })
